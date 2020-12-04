@@ -19,9 +19,10 @@ public class Setup {
         String str_line;
         while ((str_line = buffer.readLine()) != null) {
             str_line = str_line.trim();
-            if ((str_line.length() != 0)) {
+            if ((str_line.length() != 0) || str_line.equals("")) {
                 dataInputList.add(str_line);
             }
+
         }
         dataInput = dataInputList.toArray(new String[dataInputList.size()]);
         return dataInput;
